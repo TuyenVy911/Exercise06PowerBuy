@@ -14,7 +14,7 @@ This README would normally document whatever steps are necessary to get your app
 
 * Change language to EN
 
-* Search by using the keyword “TV” :tv:
+* Search by using the keyword “TV”
 
 * Filter TV with Screen Size Group (inches) “44 – 55 inches” screen size and add one item to the cart from the return list
 
@@ -36,9 +36,10 @@ Make sure you have installed all of the following prerequisites on your developm
 
 * Configuration
 ## :checkered_flag: Starting ##
-** Add your project path in ***localRepository*** tag
+ The file "setting.xml" located in maven/config package needs attention: Add your project path in ***localRepository*** tag
 
-```<?xml version="1.0" encoding="UTF-8"?>
+```
+<?xml version="1.0" encoding="UTF-8"?>
 <settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
@@ -53,9 +54,10 @@ Make sure you have installed all of the following prerequisites on your developm
 ```
 
 * Dependencies
-pom.xml
+`pom.xml`
 
-```<?xml version="1.0" encoding="UTF-8"?>
+```
+<?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
@@ -237,15 +239,20 @@ pom.xml
 </project>
 ```
 
-* How to run tests
+### How to run tests ###
 There are a couple of ways to execute the code
-Using TestNG there is 2 way: 
-- To run test project, simply right-click on ItemsInCart.xml and select "Run"
-- Typing this line to terminal `mvn --settings ./maven/config/settings.xml test -Dtestsuite=ItemsInCart`
+
+* Using TestNG there is 2 way: 
+ To run test project, simply right-click on ItemsInCart.xml and select "Run"
+
+ Typing this line to terminal `mvn --settings ./maven/config/settings.xml test -Dtestsuite=ItemsInCart`
+
   Please ensure that you add the required code to the pom.xml file
-```<suiteXmlFiles>
+
+```
+<suiteXmlFiles>
       <suiteXmlFile>${project.basedir}/src/main/resources/testsuites/${testsuite}.xml</suiteXmlFile>
-   </suiteXmlFiles>
+</suiteXmlFiles>
 ```
 Using Cucumber framework: right-click on TestNGRunner.java and select "Run"
 
@@ -257,7 +264,7 @@ Using Cucumber framework: right-click on TestNGRunner.java and select "Run"
 * Code review
 * Other guidelines
 
-### :thinking: Who do I talk to? ###
+### :thinking: :e-mail: Who do I talk to? ###
 
-* Kim Tuyen
+* Kim Tuyen [kimtuyentoothpickee@gmail.com](kimtuyentoothpickee@gmail.com)
 * Luu Minh Tuyen (Mentor)
